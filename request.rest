@@ -1,0 +1,35 @@
+# To check the API requests here for that you have to install the REST Client extention
+
+Get http://localhost:3003/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWhtZWQiLCJpYXQiOjE2NTU0NzM4NTMsImV4cCI6MTY1NTQ3NTg1M30.euo-RES7lyJgMZFNBOFtf8QTnbrYpIb6bFUbHF_G3AU
+
+###
+# Delete token 
+DELETE http://localhost:3004/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWhtZWQiLCJpYXQiOjE2NTU0NzM4NTN9.YNrfYHVgUhPcIHP2if1GU5ZX3Cecu2LV8bowHLduCC0"
+}
+
+###
+# To generate token from refresh token
+POST http://localhost:3004/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWhtZWQiLCJpYXQiOjE2NTU0NzM4NTN9.YNrfYHVgUhPcIHP2if1GU5ZX3Cecu2LV8bowHLduCC0"
+}
+
+
+
+###
+
+POST http://localhost:3004/login
+Content-Type: application/json
+
+{
+    "username": "Ahmed"
+}
+
+
