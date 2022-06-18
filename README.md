@@ -6,3 +6,10 @@ This repository contain the code of authentication using jwt. this project has n
  - request.rest // this file contains all the APIs both for server-1 and server-2 to get posts delete tokect generate token and refresh token
 
 Note: it is not compulsory to use the request.rest file. this file need vs-code extention named REST client. So you can check APIs by using postman thunder client or browser.
+
+
+Add ACCESS_TOKEN_SECRET and REFRESH_TOKEN_SECRET in your .env file to generate random hashes write the below command in nodejs environment.
+
+require("crypto").randomBytes(64).toString("hex")
+
+assign the two different generate hash in .env file to both const ACCESS_TOKEN_SECRET and REFRESH_TOKEN_SECRET
